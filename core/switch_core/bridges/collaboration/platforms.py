@@ -20,6 +20,10 @@ from switch_core.bridges.collaboration.mattermost.adapter import (
     MattermostConnectionConfig,
 )
 from switch_core.bridges.collaboration.models import BridgeConnectionConfig
+from switch_core.bridges.collaboration.rocketchat.adapter import (
+    RocketChatAdapter,
+    RocketChatConnectionConfig,
+)
 from switch_core.bridges.collaboration.slack.adapter import (
     SlackAdapter,
     SlackConnectionConfig,
@@ -58,6 +62,7 @@ PLATFORMS: tuple[PlatformRegistration, ...] = (
     PlatformRegistration("discord", DiscordAdapter, DiscordConnectionConfig),
     PlatformRegistration("telegram", TelegramAdapter, TelegramConnectionConfig),
     PlatformRegistration("webex", WebexAdapter, WebexConnectionConfig),
+    PlatformRegistration("rocketchat", RocketChatAdapter, RocketChatConnectionConfig),
 )
 
 
